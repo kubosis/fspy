@@ -1,2 +1,2 @@
 # pyFlashscoreScrapper
-Web scrapper for flashscore.com written in python
+Simple web scrapper for flashscore.com written in python
