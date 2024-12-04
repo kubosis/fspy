@@ -51,4 +51,6 @@ cover/
 
 __pypackages__/
 
+.venv/
+
 
