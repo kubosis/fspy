@@ -1,6 +1,6 @@
 ![Flake8 Status](https://github.com/kubosis/fspy/actions/workflows/quality.yml/badge.svg)
 ![Tests](https://github.com/kubosis/fspy/actions/workflows/test.yml/badge.svg)
-[![codecov](https://codecov.io/gh/kubosis/fspy/branch/main/graph/badge.svg?token=YOUR_TOKEN)](https://codecov.io/gh/kubosis/fspy)
+[![codecov](https://codecov.io/gh/kubosis/fspy/branch/main/graph/badge.svg?token=${{ secrets.CODECOV_TOKEN }})](https://codecov.io/gh/kubosis/fspy)
 
 
 
