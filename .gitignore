@@ -53,4 +53,6 @@ __pypackages__/
 
 .venv/
 
+*.csv
+
 
