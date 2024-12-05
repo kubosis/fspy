@@ -19,8 +19,8 @@ if __name__ == '__main__':
     scrapper_NBA = FlashScrapper("nba.csv", 2000, 2023,
                                  "basketball", "usa", "nba", verbosity_level=VERBOSITY_LEVEL_DEBUG)
 
-    scrapper_extra_liga = FlashScrapper("extra_liga.csv", 2000, 2023,
-                                 "hockey", "czech-republic", "extra-liga",
+    scrapper_extra_liga = FlashScrapper("extraliga.csv", 2000, 2023,
+                                 "hockey", "czech-republic", "extraliga",
                                         verbosity_level=VERBOSITY_LEVEL_DEBUG)
 
     scrapper_wimbledon = FlashScrapper("wimbledon.csv", 2000, 2023,
@@ -35,10 +35,10 @@ if __name__ == '__main__':
                                                 "volleyball", "poland", "plusliga",
                                       verbosity_level=VERBOSITY_LEVEL_DEBUG)
 
-    scrapper_NFL.run()
-    scrapper_premier_league.run()
-    scrapper_NBA.run()
-    scrapper_extra_liga.run()
+    #scrapper_NFL.run()
+    #scrapper_premier_league.run()
+    #scrapper_NBA.run()
+    #scrapper_extra_liga.run()
     scrapper_wimbledon.run()
     scrapper_svenska_superligan.run()
     scrapper_plusliga.run()

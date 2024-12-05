@@ -113,9 +113,11 @@ class FlashScrapper:
         soup = BeautifulSoup(html, 'html.parser')
 
         home_score = soup.find_all(class_="event__score event__score--home")
-        home_score = list(map(lambda x: int(x.contents[0]), home_score))
         away_score = soup.find_all(class_="event__score event__score--away")
-        away_score = list(map(lambda x: int(x.contents[0]), away_score))
+        away_score = list(map(lambda x: x.contents[0], away_score))
+        home_score = list(map(lambda x: x.contents[0], home_score))
+        away_score = list(map(lambda x: int(x) if x.isnumeric() else None, away_score))
+        home_score = list(map(lambda x: int(x) if x.isnumeric() else None, home_score))
 
         home_participant = soup.find_all("div", {"class" : re.compile('event__participant event__participant--home.*')})
         home_participant = list(map(lambda x: x.contents[0], home_participant))
