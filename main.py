@@ -3,10 +3,6 @@
 from fspy.scrapper import *
 from fspy.scrapper import VERBOSITY_LEVEL_DEBUG
 
-"""
-    Driver code 
-    ----------------
-"""
 if __name__ == '__main__':
     scrapper_NFL = FlashScrapper("nfl.csv", 2000, 2023,
                              "american-football", "usa", "nfl",
@@ -35,10 +31,10 @@ if __name__ == '__main__':
                                                 "volleyball", "poland", "plusliga",
                                       verbosity_level=VERBOSITY_LEVEL_DEBUG)
 
-    #scrapper_NFL.run()
-    #scrapper_premier_league.run()
-    #scrapper_NBA.run()
-    #scrapper_extra_liga.run()
+    scrapper_NFL.run()
+    scrapper_premier_league.run()
+    scrapper_NBA.run()
+    scrapper_extra_liga.run()
     scrapper_wimbledon.run()
     scrapper_svenska_superligan.run()
     scrapper_plusliga.run()
