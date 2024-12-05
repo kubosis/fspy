@@ -10,7 +10,7 @@
     as present in the flashscore archive (e.g. https://www.flashscore.com/american-football/usa/nfl-2023-2024/results/)
 """
 
-__all__ = ["FlashScrapper"]
+__all__ = ["FlashScrapper", "VERBOSITY_LEVEL_INFO", "VERBOSITY_LEVEL_NONE", "VERBOSITY_LEVEL_DEBUG"]
 
 import pandas as pd
 from typing import Optional, Final
@@ -41,7 +41,7 @@ class FlashScrapper:
     :param has_seasons: (bool) the format of seasons is YYYY-YYYY if true else YYYY
     """
     def __init__(self, out_path: str, start_year: int, end_year: int, sport: str, country: str, league: str,
-                 has_seasons: bool = True, verbosity_level: int = 0):
+                 has_seasons: bool = True, verbosity_level: int = VERBOSITY_LEVEL_NONE):
         self._out_path: str = out_path
 
         self._start_year: int = start_year
@@ -159,7 +159,7 @@ class FlashScrapper:
             print(f"[DEBUG] total number of matches scrapped: {len(self._df)}")
 
 
-    def run(self):
+    def run(self, save_csv: bool = True):
         while self._start_year < self._end_year:
             if self._has_seasons:
                 season = str(self._start_year) + "-" + str(self._start_year + 1)
@@ -172,4 +172,8 @@ class FlashScrapper:
             self._run_one_season(season)
             self._start_year += 1
 
-        self._safe_data_csv()
+        if save_csv:
+            self._safe_data_csv()
+
+    def get_data(self):
+        return self._df
