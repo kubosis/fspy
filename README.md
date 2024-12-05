@@ -1,3 +1,7 @@
+![Flake8 Status](https://github.com/kubosis/fspy/actions/workflows/quality.yml/badge.svg)
+![Tests](https://github.com/kubosis/fspy/actions/workflows/test.yml/badge.svg)
+
+
 # FSPY - flashscore scrapper for python
 Simple web scrapper for flashscore.com written in python
 
